@@ -1,0 +1,403 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/rabchev/brackets-server"
+
+    >brackets (v0.5.8)</a>
+</h1>
+<h4>Brackets Server is a server for providing hosted version of the popular code editor Brackets.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets">module brackets</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.brackets">
+            function <span class="apidocSignatureSpan"></span>brackets
+            <span class="apidocSignatureSpan">(srv, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.toString">
+            function <span class="apidocSignatureSpan">brackets.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>files</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.files">module brackets.files</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.files.init">
+            function <span class="apidocSignatureSpan">brackets.files.</span>init
+            <span class="apidocSignatureSpan">(srv)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets" id="apidoc.module.brackets">module brackets</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.brackets" id="apidoc.element.brackets.brackets">
+        function <span class="apidocSignatureSpan"></span>brackets
+        <span class="apidocSignatureSpan">(srv, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Server(srv, opts) {
+    if (!(this instanceof Server)) {
+        return new Server(srv, opts);
+    }
+
+    switch (typeof srv) {
+        case &#x22;undefined&#x22;:
+        case &#x22;null&#x22;:
+            createHttpServer(this, defaultPort);
+            break;
+        case &#x22;object&#x22;:
+            if (srv instanceof socket) {
+                this.io = srv;
+                this.httpServer = srv.httpServer;
+            } else if (srv instanceof http.Server) {
+                this.httpServer = srv;
+                this.io = socket(this.httpServer);
+            } else {
+                opts = srv;
+                srv = null;
+                createHttpServer(this, defaultPort);
+            }
+            break;
+        case &#x22;number&#x22;:
+        case &#x22;string&#x22;:
+            createHttpServer(this, Number(srv));
+            break;
+        default:
+            throw &#x22;Invalid argument – srv.&#x22;;
+    }
+
+    opts = opts || {};
+
+    this.httpRoot = removeTrailingSlash(opts.httpRoot || &#x22;/brackets&#x22;);
+    this.defaultExtensions = path.join(brckDist.root, &#x22;extensions&#x22;);
+    this.supportDir = removeTrailingSlash(opts.supportDir || path.resolve(&#x22;./brackets&#x22;));
+    this.projectsDir = removeTrailingSlash(opts.projectsDir || path.resolve(&#x22;./projects&#x22;));
+    this.samplesDir = removeTrailingSlash(opts.samplesDir || path.join(brckDist.root, &#x22;samples&#x22;));
+    this.allowUserDomains = opts.allowUserDomains || false;
+
+    switch (typeof opts.fileSystem) {
+        case &#x22;string&#x22;:
+            // Reserved for future build-in providers.
+            this.fileSystem = require(&#x22;./file-sys/&#x22; + opts.fileSystem);
+            break;
+        case &#x22;object&#x22;:
+            this.fileSystem = opts.fileSystem;
+            break;
+        case &#x22;undefined&#x22;:
+        case &#x22;null&#x22;:
+            this.fileSystem = require(&#x22;./file-sys/native&#x22;);
+            break;
+        default:
+            throw new Error(&#x22;Invalid fileSystem option.&#x22;);
+    }
+
+    var that = this;
+    this.fileSystem.mkdir(this.projectsDir, function (err) {
+        if (err &#x26;&#x26; err.code !== &#x22;EEXIST&#x22;) {
+            throw err;
+        }
+
+        attachStatic(that);
+
+        // Attach file system methods to socket.io.
+        files.init(that);
+
+        // Attach Brackets domians.
+        domains.init(that);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.toString" id="apidoc.element.brackets.toString">
+        function <span class="apidocSignatureSpan">brackets.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.files" id="apidoc.module.brackets.files">module brackets.files</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.files.init" id="apidoc.element.brackets.files.init">
+        function <span class="apidocSignatureSpan">brackets.files.</span>init
+        <span class="apidocSignatureSpan">(srv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(srv) {
+    var fs = srv.fileSystem;
+
+    function stat(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback({ err: err });
+            }
+
+            fs.stat(path, function (err, stats) {
+                callback(err ? { err: err } : { stats: stats });
+            });
+        });
+    }
+
+    function readdir(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback({ err: err });
+            }
+
+            fs.readdir(path, function (err, files) {
+                callback({ err: err, contents: files });
+            });
+        });
+    }
+
+    function mkdir(req, callback) {
+        fs.resolvePath(req.path, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.mkdir(path, req.mode, callback);
+        });
+    }
+
+    function rename(req, callback) {
+        fs.resolvePath(req.oldPath, srv, function (err, oldPath) {
+            if (err) {
+                return callback(err);
+            }
+            fs.resolvePath(req.newPath, srv, function (err, newPath) {
+                if (err) {
+                    return callback(err);
+                }
+
+                fs.rename(oldPath, newPath, callback);
+            });
+        });
+    }
+
+    function readFile(req, callback) {
+        fs.resolvePath(req.path, srv, function (err, path) {
+            if (err) {
+                return callback({ err: err });
+            }
+
+            fs.readFile(path, req.encoding, function (err, data) {
+                callback({ err: err, data: data });
+            });
+        });
+    }
+
+    function writeFile(req, callback) {
+        fs.resolvePath(req.path, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.writeFile(path, req.data, req.encoding, callback);
+        });
+    }
+
+    function unlink(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.unlink(path, callback);
+        });
+    }
+
+    function moveToTrash(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.moveToTrash(path, callback);
+        });
+    }
+
+    function watchPath(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.watchPath(path, callback);
+        });
+    }
+
+    function unwatchPath(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.unwatchPath(path, callback);
+        });
+    }
+
+    function unwatchAll(req, callback) {
+        fs.resolvePath(req, srv, function (err, path) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.unwatchAll(path, callback);
+        });
+    }
+
+    function copyFile(req, callback) {
+        fs.resolvePath(req.src, srv, function (err, src) {
+            if (err) {
+                return callback(err);
+            }
+            fs.resolvePath(req.dest, srv, function (err, dest) {
+                if (err) {
+                    return callback(err);
+                }
+
+                fs.rename(src, dest, callback);
+            });
+        });
+    }
+
+    function onConnection (socket) {
+        socket.emit(&#x22;greeting&#x22;, &#x22;hi&#x22;);
+
+        socket
+            .on(&#x22;stat&#x22;, stat)
+            .on(&#x22;mkdir&#x22;, mkdir)
+            .on(&#x22;readdir&#x22;, readdir)
+            .on(&#x22;rename&#x22;, rename)
+            .on(&#x22;readFile&#x22;, readFile)
+            .on(&#x22;writeFile&#x22;, writeFile)
+            .on(&#x22;unlink&#x22;, unlink)
+            .on(&#x22;moveToTrash&#x22;, moveToTrash)
+            .on(&#x22;watchPath&#x22;, watchPath)
+            .on(&#x22;unwatchPath&#x22;, unwatchPath)
+            .on(&#x22;unwatchAll&#x22;, unwatchAll)
+            .on(&#x22;copyFile&#x22;, copyFile); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (err &#x26;&#x26; err.code !== &#x22;EEXIST&#x22;) {
+            throw err;
+        }
+
+        attachStatic(that);
+
+        // Attach file system methods to socket.io.
+        files.<span class="apidocCodeKeywordSpan">init</span>(that);
+
+        // Attach Brackets domians.
+        domains.init(that);
+    });
+}
+
+module.exports = Server;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
