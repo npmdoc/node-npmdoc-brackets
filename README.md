@@ -1,6 +1,6 @@
 # npmdoc-brackets
 
-#### api documentation for  [brackets (v0.5.8)](https://github.com/rabchev/brackets-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-brackets.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-brackets) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-brackets.svg)](https://travis-ci.org/npmdoc/node-npmdoc-brackets)
+#### basic api documentation for  [brackets (v0.5.8)](https://github.com/rabchev/brackets-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-brackets.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-brackets) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-brackets.svg)](https://travis-ci.org/npmdoc/node-npmdoc-brackets)
 
 #### Brackets Server is a server for providing hosted version of the popular code editor Brackets.
 
