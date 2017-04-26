@@ -65,8 +65,79 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.brackets.toString">
-            function <span class="apidocSignatureSpan">brackets.</span>toString
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>BaseDomain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>ConnectionManager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>DomainManager</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>ExtensionManagerDomain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>Logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>files</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>native</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>package_validator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>socket</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.BaseDomain">module brackets.BaseDomain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.BaseDomain.init">
+            function <span class="apidocSignatureSpan">brackets.BaseDomain.</span>init
+            <span class="apidocSignatureSpan">(domainManager)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.ConnectionManager">module brackets.ConnectionManager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ConnectionManager.closeAllConnections">
+            function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>closeAllConnections
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -74,7 +145,238 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.</span>files</span>
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ConnectionManager.createConnection">
+            function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>createConnection
+            <span class="apidocSignatureSpan">(ws)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ConnectionManager.sendEventToAllConnections">
+            function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>sendEventToAllConnections
+            <span class="apidocSignatureSpan">(id, domain, event, parameters)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.DomainManager">module brackets.DomainManager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.emitEvent">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>emitEvent
+            <span class="apidocSignatureSpan">(domainName, eventName, parameters)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.executeCommand">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>executeCommand
+            <span class="apidocSignatureSpan">(connection, id, domainName, commandName, parameters)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.getDomainDescriptions">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>getDomainDescriptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.hasDomain">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>hasDomain
+            <span class="apidocSignatureSpan">(domainName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.loadDomainModulesFromPaths">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>loadDomainModulesFromPaths
+            <span class="apidocSignatureSpan">(paths)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.registerCommand">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerCommand
+            <span class="apidocSignatureSpan">(domainName, commandName, commandFunction, isAsync, description, parameters, returns)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.registerDomain">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerDomain
+            <span class="apidocSignatureSpan">(domainName, version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.DomainManager.registerEvent">
+            function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerEvent
+            <span class="apidocSignatureSpan">(domainName, eventName, parameters)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.ExtensionManagerDomain">module brackets.ExtensionManagerDomain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ExtensionManagerDomain._cmdInstall">
+            function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdInstall
+            <span class="apidocSignatureSpan">(packagePath, destinationDirectory, options, callback, _doUpdate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ExtensionManagerDomain._cmdRemove">
+            function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdRemove
+            <span class="apidocSignatureSpan">(extensionDir, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ExtensionManagerDomain._cmdUpdate">
+            function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdUpdate
+            <span class="apidocSignatureSpan">(packagePath, destinationDirectory, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ExtensionManagerDomain._cmdValidate">
+            function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdValidate
+            <span class="apidocSignatureSpan">(path, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.ExtensionManagerDomain.init">
+            function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>init
+            <span class="apidocSignatureSpan">(domainManager)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.Logger">module brackets.Logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.dir">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>dir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.error">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.getLogHistory">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>getLogHistory
+            <span class="apidocSignatureSpan">(count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.info">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.log">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.remapConsole">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>remapConsole
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.setLogFilename">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>setLogFilename
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.Logger.warn">
+            function <span class="apidocSignatureSpan">brackets.Logger.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">brackets.Logger.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.Logger.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.Logger.</span>domain</span>
 
         </li>
 
@@ -86,6 +388,168 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.brackets.files.init">
             function <span class="apidocSignatureSpan">brackets.files.</span>init
+            <span class="apidocSignatureSpan">(srv)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.native">module brackets.native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.copyFile">
+            function <span class="apidocSignatureSpan">brackets.native.</span>copyFile
+            <span class="apidocSignatureSpan">(src, dest, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.mkdir">
+            function <span class="apidocSignatureSpan">brackets.native.</span>mkdir
+            <span class="apidocSignatureSpan">(path, mode, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.moveToTrash">
+            function <span class="apidocSignatureSpan">brackets.native.</span>moveToTrash
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.readFile">
+            function <span class="apidocSignatureSpan">brackets.native.</span>readFile
+            <span class="apidocSignatureSpan">(path, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.readdir">
+            function <span class="apidocSignatureSpan">brackets.native.</span>readdir
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.rename">
+            function <span class="apidocSignatureSpan">brackets.native.</span>rename
+            <span class="apidocSignatureSpan">(oldPath, newPath, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.resolvePath">
+            function <span class="apidocSignatureSpan">brackets.native.</span>resolvePath
+            <span class="apidocSignatureSpan">(reqPath, context, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.stat">
+            function <span class="apidocSignatureSpan">brackets.native.</span>stat
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.unlink">
+            function <span class="apidocSignatureSpan">brackets.native.</span>unlink
+            <span class="apidocSignatureSpan">(path, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.unwatchAll">
+            function <span class="apidocSignatureSpan">brackets.native.</span>unwatchAll
+            <span class="apidocSignatureSpan">(req, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.unwatchPath">
+            function <span class="apidocSignatureSpan">brackets.native.</span>unwatchPath
+            <span class="apidocSignatureSpan">(req, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.watchPath">
+            function <span class="apidocSignatureSpan">brackets.native.</span>watchPath
+            <span class="apidocSignatureSpan">(req, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.native.writeFile">
+            function <span class="apidocSignatureSpan">brackets.native.</span>writeFile
+            <span class="apidocSignatureSpan">(path, data, encoding, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.package_validator">module brackets.package_validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.package_validator._parsePersonString">
+            function <span class="apidocSignatureSpan">brackets.package_validator.</span>_parsePersonString
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.package_validator.validate">
+            function <span class="apidocSignatureSpan">brackets.package_validator.</span>validate
+            <span class="apidocSignatureSpan">(path, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">brackets.package_validator.</span>errors</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.brackets.socket">module brackets.socket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.brackets.socket.init">
+            function <span class="apidocSignatureSpan">brackets.socket.</span>init
             <span class="apidocSignatureSpan">(srv)</span>
             </a>
 
@@ -182,18 +646,1056 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.BaseDomain" id="apidoc.module.brackets.BaseDomain">module brackets.BaseDomain</a></h1>
+
+
     <h2>
-        <a href="#apidoc.element.brackets.toString" id="apidoc.element.brackets.toString">
-        function <span class="apidocSignatureSpan">brackets.</span>toString
+        <a href="#apidoc.element.brackets.BaseDomain.init" id="apidoc.element.brackets.BaseDomain.init">
+        function <span class="apidocSignatureSpan">brackets.BaseDomain.</span>init
+        <span class="apidocSignatureSpan">(domainManager)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(domainManager) {
+    _domainManager = domainManager;
+
+    _domainManager.registerDomain("base", {major: 0, minor: 1});
+    _domainManager.registerCommand(
+        "base",
+        "enableDebugger",
+        cmdEnableDebugger,
+        false,
+        "Attempt to enable the debugger",
+        [], // no parameters
+        []  // no return type
+    );
+    _domainManager.registerCommand(
+        "base",
+        "restartNode",
+        cmdRestartNode,
+        false,
+        "Attempt to restart the Node server",
+        [], // no parameters
+        []  // no return type
+    );
+    _domainManager.registerCommand(
+        "base",
+        "loadDomainModulesFromPaths",
+        cmdLoadDomainModulesFromPaths,
+        false,
+        "Attempt to load command modules from the given paths. " +
+        "The paths should be absolute.",
+        [{name: "paths", type: "array&lt;string&gt;"}],
+        [{name: "success", type: "boolean"}]
+    );
+
+    _domainManager.registerEvent(
+        "base",
+        "log",
+        [{name: "level", type: "string"},
+         {name: "timestamp", type: "Date"},
+         {name: "message", type: "string"}]
+    );
+    Logger.on(
+        "log",
+        function (level, timestamp, message) {
+            _domainManager.emitEvent(
+                "base",
+                "log",
+                [level, timestamp, message]
+            );
+        }
+    );
+
+    _domainManager.registerEvent("base", "newDomains", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (err &amp;&amp; err.code !== "EEXIST") {
+            throw err;
+        }
+
+        attachStatic(that);
+
+        // Attach file system methods to socket.io.
+        files.<span class="apidocCodeKeywordSpan">init</span>(that);
+
+        // Attach Brackets domians.
+        domains.init(that);
+    });
+}
+
+module.exports = Server;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.ConnectionManager" id="apidoc.module.brackets.ConnectionManager">module brackets.ConnectionManager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ConnectionManager.closeAllConnections" id="apidoc.element.brackets.ConnectionManager.closeAllConnections">
+        function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>closeAllConnections
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
+    <li>description and source-code<pre class="apidocCodePre">function closeAllConnections() {
+    var i;
+    for (i = 0; i &lt; _connections.length; i++) {
+        try {
+            _connections[i].close();
+        } catch (err) { }
+    }
+    _connections = [];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ConnectionManager.createConnection" id="apidoc.element.brackets.ConnectionManager.createConnection">
+        function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>createConnection
+        <span class="apidocSignatureSpan">(ws)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createConnection(ws) {
+    _connections.push(new Connection(ws));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ConnectionManager.sendEventToAllConnections" id="apidoc.element.brackets.ConnectionManager.sendEventToAllConnections">
+        function <span class="apidocSignatureSpan">brackets.ConnectionManager.</span>sendEventToAllConnections
+        <span class="apidocSignatureSpan">(id, domain, event, parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sendEventToAllConnections(id, domain, event, parameters) {
+    _connections.forEach(function (c) {
+        c.sendEventMessage(id, domain, event, parameters);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {string} domainName The domain name.
+ * @param {string} eventName The event name.
+ * @param {?Array} parameters The parameters. Must be JSON.stringify-able
+ */
+function emitEvent(domainName, eventName, parameters) {
+    if (_domains[domainName] &amp;&amp; _domains[domainName].events[eventName]) {
+        ConnectionManager.<span class="apidocCodeKeywordSpan">sendEventToAllConnections</span>(
+            _eventCount++,
+            domainName,
+            eventName,
+            parameters
+        );
+    } else {
+        console.error("[DomainManager] No such event: " + domainName +
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.DomainManager" id="apidoc.module.brackets.DomainManager">module brackets.DomainManager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.emitEvent" id="apidoc.element.brackets.DomainManager.emitEvent">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>emitEvent
+        <span class="apidocSignatureSpan">(domainName, eventName, parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emitEvent(domainName, eventName, parameters) {
+    if (_domains[domainName] &amp;&amp; _domains[domainName].events[eventName]) {
+        ConnectionManager.sendEventToAllConnections(
+            _eventCount++,
+            domainName,
+            eventName,
+            parameters
+        );
+    } else {
+        console.error("[DomainManager] No such event: " + domainName +
+                      "." + eventName);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Array.&lt;string&gt;} paths Paths to load
+ * @return {boolean} Whether the load succeeded
+ */
+function cmdLoadDomainModulesFromPaths(paths) {
+    if (_domainManager) {
+        var success = _domainManager.loadDomainModulesFromPaths(paths);
+        if (success) {
+            _domainManager.<span class="apidocCodeKeywordSpan">emitEvent</span>("base", "newDomains");
+        }
+        return success;
+    } else {
+        return false;
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.executeCommand" id="apidoc.element.brackets.DomainManager.executeCommand">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>executeCommand
+        <span class="apidocSignatureSpan">(connection, id, domainName, commandName, parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function executeCommand(connection, id, domainName, commandName, parameters) {
+    var el, i;
+
+    for (i = 0; i &lt; parameters.length; i++) {
+        el = parameters[i];
+        if (typeof el === "string") {
+            if  (el.startsWith("/projects/")) {
+                parameters[i] = exports.projectsDir + el.substr("/projects".length);
+            } else if  (el.startsWith("/samples/")) {
+                parameters[i] = exports.samplesDir + el.substr("/samples".length);
+            }
+        }
+    }
+
+    if (_domains[domainName] &amp;&amp;
+        _domains[domainName].commands[commandName]) {
+        var command = _domains[domainName].commands[commandName];
+        if (command.isAsync) {
+            var execDom     = domain.create(),
+                callback    = function (err, result) {
+                    if (err) {
+                        connection.sendCommandError(id, err);
+                    } else {
+                        connection.sendCommandResponse(id, result);
+                    }
+                };
+
+            parameters.push(callback);
+
+            execDom.on("error", function(err) {
+                connection.sendCommandError(id, err.message);
+                execDom.dispose();
+            });
+
+            execDom.bind(command.commandFunction).apply(connection, parameters);
+        } else { // synchronous command
+            try {
+                connection.sendCommandResponse(
+                    id,
+                    command.commandFunction.apply(connection, parameters)
+                );
+            } catch (e) {
+                connection.sendCommandError(id, e.message);
+            }
+        }
+    } else {
+        connection.sendCommandError(id, "no such command: " +
+                                    domainName + "." + commandName);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.sendError("Unable to parse message: " + message);
+    return;
+}
+
+if (m.id !== null &amp;&amp; m.id !== undefined &amp;&amp; m.domain &amp;&amp; m.command) {
+    // okay if m.parameters is null/undefined
+    try {
+        DomainManager.<span class="apidocCodeKeywordSpan">executeCommand</span>(this, m.id, m.domain,
+                                     m.command, m.parameters);
+    } catch (executionError) {
+        this.sendCommandError(m.id, executionError.message,
+                              executionError.stack);
+    }
+} else {
+    this.sendError("Malformed message: " + message);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.getDomainDescriptions" id="apidoc.element.brackets.DomainManager.getDomainDescriptions">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>getDomainDescriptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDomainDescriptions() {
+    if (!_cachedDomainDescriptions) {
+        _cachedDomainDescriptions = [];
+
+        var domainNames = Object.keys(_domains);
+        domainNames.forEach(function (domainName) {
+            var d = {
+                domain: domainName,
+                version: _domains[domainName].version,
+                commands: [],
+                events: []
+            };
+            var commandNames = Object.keys(_domains[domainName].commands);
+            commandNames.forEach(function (commandName) {
+                var c = _domains[domainName].commands[commandName];
+                d.commands.push({
+                    name: commandName,
+                    description: c.description,
+                    parameters: c.parameters,
+                    returns: c.returns
+                });
+            });
+            var eventNames = Object.keys(_domains[domainName].events);
+            eventNames.forEach(function (eventName) {
+                d.events.push({
+                    name: eventName,
+                    parameters: _domains[domainName].events[eventName].parameters
+                });
+            });
+            _cachedDomainDescriptions.push(d);
+        });
+    }
+    return _cachedDomainDescriptions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var root = srv.httpRoot + "-ext",
+    apiUrl = root + "/api";
+
+srv.httpServer.on("request", function (req, res) {
+    if (req.url.startsWith(apiUrl)) {
+        res.setHeader("Content-Type", "application/json");
+        res.end(
+            JSON.stringify(DomainManager.<span class="apidocCodeKeywordSpan">getDomainDescriptions</span>(),
+                           null,
+                           4)
+        );
+    }
+});
+
+srv.io
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.hasDomain" id="apidoc.element.brackets.DomainManager.hasDomain">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>hasDomain
+        <span class="apidocSignatureSpan">(domainName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasDomain(domainName) {
+    return !!_domains[domainName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Initialize the "extensions" domain.
+ * The extensions domain handles downloading, unpacking/verifying, and installing extensions.
+ */
+function init(domainManager) {
+supportDir = domainManager.supportDir;
+if (!domainManager.<span class="apidocCodeKeywordSpan">hasDomain</span>("extensionManager")) {
+    domainManager.registerDomain("extensionManager", {major: 0, minor: 1});
+}
+domainManager.registerCommand(
+    "extensionManager",
+    "validate",
+    validate,
+    true,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.loadDomainModulesFromPaths" id="apidoc.element.brackets.DomainManager.loadDomainModulesFromPaths">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>loadDomainModulesFromPaths
+        <span class="apidocSignatureSpan">(paths)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadDomainModulesFromPaths(paths) {
+    var pathArray = paths;
+    if (!util.isArray(paths)) {
+        pathArray = [paths];
+    }
+    pathArray.forEach(function (path) {
+        if (path.startsWith(exports.httpRoot)) {
+            path = "../../brackets-srv" + path.substr(exports.httpRoot.length);
+        } else if (path.startsWith("/support/extensions/user/")) {
+            if (exports.allowUserDomains) {
+                path = exports.supportDir + path.substr("/support".length);
+            } else {
+                console.error("ERROR: User domains are not allowed: " + path);
+                return false;
+            }
+        } else if (path !== "./BaseDomain") {
+            console.error("ERROR: Invalid domain path: " + path);
+            return false;
+        }
+
+        try {
+            var m = require(path);
+            if (m &amp;&amp; m.init &amp;&amp; _initializedDomainModules.indexOf(m) &lt; 0) {
+                m.init(self);
+                _initializedDomainModules.push(m); // don't init more than once
+            }
+        } catch (err) {
+            console.error(err);
+            return false;
+        }
+    });
+    return true; // if we fail, an exception will be thrown
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @private
+ * Implementation of base.loadDomainModulesFromPaths
+ * @param {Array.&lt;string&gt;} paths Paths to load
+ * @return {boolean} Whether the load succeeded
+ */
+function cmdLoadDomainModulesFromPaths(paths) {
+    if (_domainManager) {
+        var success = _domainManager.<span class="apidocCodeKeywordSpan">loadDomainModulesFromPaths</span>(paths);
+        if (success) {
+            _domainManager.emitEvent("base", "newDomains");
+        }
+        return success;
+    } else {
+        return false;
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.registerCommand" id="apidoc.element.brackets.DomainManager.registerCommand">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerCommand
+        <span class="apidocSignatureSpan">(domainName, commandName, commandFunction, isAsync, description, parameters, returns)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerCommand(domainName, commandName, commandFunction, isAsync, description, parameters, returns) {
+    // invalidate the cache
+    _cachedDomainDescriptions = null;
+
+    if (!hasDomain(domainName)) {
+        registerDomain(domainName, null);
+    }
+
+    if (!_domains[domainName].commands[commandName]) {
+        _domains[domainName].commands[commandName] = {
+            commandFunction: commandFunction,
+            isAsync: isAsync,
+            description: description,
+            parameters: parameters,
+            returns: returns
+        };
+    } else {
+        throw new Error("Command " + domainName + "." +
+                        commandName + " already registered");
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * Registers commands with the DomainManager
+     * @param {DomainManager} domainManager The DomainManager to use
+     */
+    function init(domainManager) {
+_domainManager = domainManager;
+
+_domainManager.registerDomain("base", {major: 0, minor: 1});
+_domainManager.<span class="apidocCodeKeywordSpan">registerCommand</span>(
+    "base",
+    "enableDebugger",
+    cmdEnableDebugger,
+    false,
+    "Attempt to enable the debugger",
+    [], // no parameters
+    []  // no return type
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.registerDomain" id="apidoc.element.brackets.DomainManager.registerDomain">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerDomain
+        <span class="apidocSignatureSpan">(domainName, version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerDomain(domainName, version) {
+    if (!hasDomain(domainName)) {
+        // invalidate the cache
+        _cachedDomainDescriptions = null;
+
+        _domains[domainName] = {version: version, commands: {}, events: {}};
+    } else {
+        console.error("[DomainManager] Domain " + domainName + " already registered");
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     *
+     * Registers commands with the DomainManager
+     * @param {DomainManager} domainManager The DomainManager to use
+     */
+    function init(domainManager) {
+_domainManager = domainManager;
+
+_domainManager.<span class="apidocCodeKeywordSpan">registerDomain</span>("base", {major: 0, minor: 1});
+_domainManager.registerCommand(
+    "base",
+    "enableDebugger",
+    cmdEnableDebugger,
+    false,
+    "Attempt to enable the debugger",
+    [], // no parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.DomainManager.registerEvent" id="apidoc.element.brackets.DomainManager.registerEvent">
+        function <span class="apidocSignatureSpan">brackets.DomainManager.</span>registerEvent
+        <span class="apidocSignatureSpan">(domainName, eventName, parameters)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerEvent(domainName, eventName, parameters) {
+    // invalidate the cache
+    _cachedDomainDescriptions = null;
+
+    if (!hasDomain(domainName)) {
+        registerDomain(domainName, null);
+    }
+
+    if (!_domains[domainName].events[eventName]) {
+        _domains[domainName].events[eventName] = {
+            parameters: parameters
+        };
+    } else {
+        console.error("[DomainManager] Event " + domainName + "." +
+                      eventName + " already registered");
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    false,
+    "Attempt to load command modules from the given paths. " +
+    "The paths should be absolute.",
+    [{name: "paths", type: "array&lt;string&gt;"}],
+    [{name: "success", type: "boolean"}]
+);
+
+_domainManager.<span class="apidocCodeKeywordSpan">registerEvent</span>(
+    "base",
+    "log",
+    [{name: "level", type: "string"},
+     {name: "timestamp", type: "Date"},
+     {name: "message", type: "string"}]
+);
+Logger.on(
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.ExtensionManagerDomain" id="apidoc.module.brackets.ExtensionManagerDomain">module brackets.ExtensionManagerDomain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ExtensionManagerDomain._cmdInstall" id="apidoc.element.brackets.ExtensionManagerDomain._cmdInstall">
+        function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdInstall
+        <span class="apidocSignatureSpan">(packagePath, destinationDirectory, options, callback, _doUpdate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _cmdInstall(packagePath, destinationDirectory, options, callback, _doUpdate) {
+    if (!options || !options.disabledDirectory || !options.apiVersion || !options.systemExtensionDirectory) {
+        callback(new Error(Errors.MISSING_REQUIRED_OPTIONS), null);
+        return;
+    }
+
+    var validateCallback = function (err, validationResult) {
+        validationResult.localPath = packagePath;
+
+        if (destinationDirectory.indexOf("/support/") === 0) {
+            destinationDirectory = path.join(supportDir, destinationDirectory.substr(8));
+        }
+
+        // This is a wrapper for the callback that will delete the temporary
+        // directory to which the package was unzipped.
+        function deleteTempAndCallback(err) {
+            if (validationResult.extractDir) {
+                fs.remove(validationResult.extractDir);
+                delete validationResult.extractDir;
+            }
+            callback(err, validationResult);
+        }
+
+        // If there was trouble at the validation stage, we stop right away.
+        if (err || validationResult.errors.length &gt; 0) {
+            validationResult.installationStatus = Statuses.FAILED;
+            deleteTempAndCallback(err, validationResult);
+            return;
+        }
+
+        // Prefers the package.json name field, but will take the zip
+        // file's name if that's all that's available.
+        var extensionName, guessedName;
+        if (options.nameHint) {
+            guessedName = path.basename(options.nameHint, ".zip");
+        } else {
+            guessedName = path.basename(packagePath, ".zip");
+        }
+        if (validationResult.metadata) {
+            extensionName = validationResult.metadata.name;
+        } else {
+            extensionName = guessedName;
+        }
+
+        validationResult.name = extensionName;
+        var installDirectory = path.join(destinationDirectory, extensionName),
+            legacyDirectory = path.join(destinationDirectory, guessedName),
+            systemInstallDirectory = path.join(options.systemExtensionDirectory, extensionName);
+
+        if (validationResult.metadata &amp;&amp; validationResult.metadata.engines &amp;&amp;
+                validationResult.metadata.engines.brackets) {
+            var compatible = semver.satisfies(options.apiVersion,
+                                              validationResult.metadata.engines.brackets);
+            if (!compatible) {
+                installDirectory = path.join(options.disabledDirectory, extensionName);
+                validationResult.installationStatus = Statuses.DISABLED;
+                validationResult.disabledReason = Errors.API_NOT_COMPATIBLE;
+                _removeAndInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+                return;
+            }
+        }
+
+        // The "legacy" stuff should go away after all of the commonly used extensions
+        // have been upgraded with package.json files.
+        var hasLegacyPackage = validationResult.metadata &amp;&amp; legacyPackageCheck(legacyDirectory);
+
+        // If the extension is already there, we signal to the front end that it's already installed
+        // unless the front end has signaled an intent to update.
+        if (hasLegacyPackage || fs.existsSync(installDirectory) || fs.existsSync(systemInstallDirectory)) {
+            if (_doUpdate) {
+                if (hasLegacyPackage) {
+                    // When there's a legacy installed extension, remove it first,
+                    // then also remove any new-style directory the user may have.
+                    // This helps clean up if the user is in a state where they have
+                    // both legacy and new extensions installed.
+                    fs.remove(legacyDirectory, function (err) {
+                        if (err) {
+                            deleteTempAndCallback(err, validationResult);
+                            return;
+                        }
+                        _removeAndInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+                    });
+                } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ExtensionManagerDomain._cmdRemove" id="apidoc.element.brackets.ExtensionManagerDomain._cmdRemove">
+        function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdRemove
+        <span class="apidocSignatureSpan">(extensionDir, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _cmdRemove(extensionDir, callback) {
+    if (extensionDir.indexOf("/support/") === 0) {
+        extensionDir = path.join(supportDir, extensionDir.substr(8));
+    }
+
+    fs.remove(extensionDir, function (err) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ExtensionManagerDomain._cmdUpdate" id="apidoc.element.brackets.ExtensionManagerDomain._cmdUpdate">
+        function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdUpdate
+        <span class="apidocSignatureSpan">(packagePath, destinationDirectory, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _cmdUpdate(packagePath, destinationDirectory, options, callback) {
+    _cmdInstall(packagePath, destinationDirectory, options, callback, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ExtensionManagerDomain._cmdValidate" id="apidoc.element.brackets.ExtensionManagerDomain._cmdValidate">
+        function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>_cmdValidate
+        <span class="apidocSignatureSpan">(path, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(path, options, callback) {
+    options = options || {};
+    fs.exists(path, function (doesExist) {
+        if (!doesExist) {
+            callback(null, {
+                errors: [[Errors.NOT_FOUND_ERR, path]]
+            });
+            return;
+        }
+        temp.mkdir("bracketsPackage_", function _tempDirCreated(err, extractDir) {
+            if (err) {
+                callback(err, null);
+                return;
+            }
+            extractAndValidateFiles(path, extractDir, options, callback);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.ExtensionManagerDomain.init" id="apidoc.element.brackets.ExtensionManagerDomain.init">
+        function <span class="apidocSignatureSpan">brackets.ExtensionManagerDomain.</span>init
+        <span class="apidocSignatureSpan">(domainManager)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(domainManager) {
+    supportDir = domainManager.supportDir;
+    if (!domainManager.hasDomain("extensionManager")) {
+        domainManager.registerDomain("extensionManager", {major: 0, minor: 1});
+    }
+    domainManager.registerCommand(
+        "extensionManager",
+        "validate",
+        validate,
+        true,
+        "Verifies that the contents of the given ZIP file are a valid Brackets extension package",
+        [{
+            name: "path",
+            type: "string",
+            description: "absolute filesystem path of the extension package"
+        }, {
+            name: "options",
+            type: "{requirePackageJSON: ?boolean}",
+            description: "options to control the behavior of the validator"
+        }],
+        [{
+            name: "errors",
+            type: "string|Array.&lt;string&gt;",
+            description: "download error, if any; first string is error code (one of Errors.*); subsequent strings are additional
+ info"
+        }, {
+            name: "metadata",
+            type: "{name: string, version: string}",
+            description: "all package.json metadata (null if there's no package.json)"
+        }]
+    );
+    domainManager.registerCommand(
+        "extensionManager",
+        "install",
+        _cmdInstall,
+        true,
+        "Installs the given Brackets extension if it is valid (runs validation command automatically)",
+        [{
+            name: "path",
+            type: "string",
+            description: "absolute filesystem path of the extension package"
+        }, {
+            name: "destinationDirectory",
+            type: "string",
+            description: "absolute filesystem path where this extension should be installed"
+        }, {
+            name: "options",
+            type: "{disabledDirectory: !string, apiVersion: !string, nameHint: ?string, systemExtensionDirectory: !string}",
+            description: "installation options: disabledDirectory should be set so that extensions can be installed disabled."
+        }],
+        [{
+            name: "errors",
+            type: "string|Array.&lt;string&gt;",
+            description: "download error, if any; first string is error code (one of Errors.*); subsequent strings are additional
+ info"
+        }, {
+            name: "metadata",
+            type: "{name: string, version: string}",
+            description: "all package.json metadata (null if there's no package.json)"
+        }, {
+            name: "disabledReason",
+            type: "string",
+            description: "reason this extension was installed disabled (one of Errors.*), none if it was enabled"
+        }, {
+            name: "installationStatus",
+            type: "string",
+            description: "Current status of the installation (an extension can be valid but not installed because it's an update
+"
+        }, {
+            name: "installedTo",
+            type: "string",
+            description: "absolute path where the extension was installed to"
+        }, {
+            name: "commonPrefix",
+            type: "string",
+            description: "top level directory in the package zip which contains all of the files"
+        }]
+    );
+    domainManager.registerCommand(
+        "extensionManager",
+        "update",
+        _cmdUpdate,
+        true,
+        "Updates the given Brackets extension (for which install was generally previously attemped). Brackets must be quit after
+ this.",
+        [{
+            name: "path",
+            type: "string",
+            description: "absolute filesystem path of the extension package"
+        }, {
+            name: "destinationDirectory",
+            type: "string",
+            description: "absolute filesystem path where this extension should be installed"
+        }, {
+            name: "options",
+            type: "{disabledDirectory: !string, apiVersion: !string, nameHint: ?string, systemExtensionDirectory: !string}",
+            description: "installation options: disabledDirectory should be set so that extensions can be installed disabled."
+        }],
+        [{
+            name: "errors",
+            t ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (err &amp;&amp; err.code !== "EEXIST") {
+            throw err;
+        }
+
+        attachStatic(that);
+
+        // Attach file system methods to socket.io.
+        files.<span class="apidocCodeKeywordSpan">init</span>(that);
+
+        // Attach Brackets domians.
+        domains.init(that);
+    });
+}
+
+module.exports = Server;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.Logger" id="apidoc.module.brackets.Logger">module brackets.Logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.dir" id="apidoc.element.brackets.Logger.dir">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>dir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dir() {
+    // dir does not do optional string formatting
+    var args = Array.prototype.slice.call(arguments, 0);
+    args.unshift("%s");
+    logReplacement("dir", args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.error" id="apidoc.element.brackets.Logger.error">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error() { logReplacement("error", arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {object} message Message body, must be JSON.stringify-able
+ */
+Connection.prototype._send = function (type, message) {
+    if (this._ws &amp;&amp; this._connected) {
+        try {
+            this._ws.send(JSON.stringify({type: type, message: message}));
+        } catch (e) {
+            console.<span class="apidocCodeKeywordSpan">error</span>("[Connection] Unable to stringify message: " + e.
+message);
+        }
+    }
+};
+
+/**
+ * @private
+ * Sends a binary message over the WebSocket. Implicitly interpreted as a
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.getLogHistory" id="apidoc.element.brackets.Logger.getLogHistory">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>getLogHistory
+        <span class="apidocSignatureSpan">(count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getLogHistory(count) {
+    if (count === null) {
+        count = 0;
+    }
+    return _logHistory.slice(-count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.info" id="apidoc.element.brackets.Logger.info">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function info() { logReplacement("info", arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.log" id="apidoc.element.brackets.Logger.log">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function log() { logReplacement("log", arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        projectsDir: path.join(__dirname, ".."),
+        supportDir: path.join(__dirname, "..", "/support")
+    };
+    brackets(server, bracketsOpts);
+
+    server.listen(3000);
+
+    console.<span class="apidocCodeKeywordSpan">log</span>("Your application is availble at http://localhost:3000");
+    console.log("You can access Brackets on http://localhost:3000/brackets/");
+```
+
+**NOTE:** The default values for `projectsDir` and `supportDir` are different when Brackets Server is initiated from code. They
+are respectively `./projects` and `./brackets`, relative to the current working directory.
+
+Options:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.remapConsole" id="apidoc.element.brackets.Logger.remapConsole">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>remapConsole
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remapConsole() {
+    // Reassign logging functions to our logger
+    // NOTE: console.timeEnd uses console.log and console.trace uses
+    // console.error, so we don't need to change it explicitly
+    console.log   = log;
+    console.info  = info;
+    console.warn  = warn;
+    console.error = error;
+    console.dir   = dir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.setLogFilename" id="apidoc.element.brackets.Logger.setLogFilename">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>setLogFilename
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setLogFilename(filename) {
+    _logFilename = filename;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.Logger.warn" id="apidoc.element.brackets.Logger.warn">
+        function <span class="apidocSignatureSpan">brackets.Logger.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function warn() { logReplacement("warn", arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
 
 
 
@@ -366,6 +1868,577 @@
             .on("unwatchPath", unwatchPath)
             .on("unwatchAll", unwatchAll)
             .on("copyFile", copyFile); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (err &amp;&amp; err.code !== "EEXIST") {
+            throw err;
+        }
+
+        attachStatic(that);
+
+        // Attach file system methods to socket.io.
+        files.<span class="apidocCodeKeywordSpan">init</span>(that);
+
+        // Attach Brackets domians.
+        domains.init(that);
+    });
+}
+
+module.exports = Server;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.native" id="apidoc.module.brackets.native">module brackets.native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.copyFile" id="apidoc.element.brackets.native.copyFile">
+        function <span class="apidocSignatureSpan">brackets.native.</span>copyFile
+        <span class="apidocSignatureSpan">(src, dest, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copyFile(src, dest, callback) {
+    ncp(src, dest, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.mkdir" id="apidoc.element.brackets.native.mkdir">
+        function <span class="apidocSignatureSpan">brackets.native.</span>mkdir
+        <span class="apidocSignatureSpan">(path, mode, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mkdir(path, mode, callback) {
+    mkdirp(path, { mode: mode }, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function mkdir(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">mkdir</span>(path, req.mode, callback);
+    });
+}
+
+function rename(req, callback) {
+    fs.resolvePath(req.oldPath, srv, function (err, oldPath) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.moveToTrash" id="apidoc.element.brackets.native.moveToTrash">
+        function <span class="apidocSignatureSpan">brackets.native.</span>moveToTrash
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moveToTrash(path, callback) {
+    rimraf(path, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function moveToTrash(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">moveToTrash</span>(path, callback);
+    });
+}
+
+function watchPath(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.readFile" id="apidoc.element.brackets.native.readFile">
+        function <span class="apidocSignatureSpan">brackets.native.</span>readFile
+        <span class="apidocSignatureSpan">(path, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readFile(path, encoding, callback) {
+    fs.readFile(path, { encoding: encoding }, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function readFile(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+        if (err) {
+            return callback({ err: err });
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">readFile</span>(path, req.encoding, function (err, data) {
+            callback({ err: err, data: data });
+        });
+    });
+}
+
+function writeFile(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.readdir" id="apidoc.element.brackets.native.readdir">
+        function <span class="apidocSignatureSpan">brackets.native.</span>readdir
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readdir(path, callback) {
+    fs.readdir(path, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function readdir(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback({ err: err });
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">readdir</span>(path, function (err, files) {
+            callback({ err: err, contents: files });
+        });
+    });
+}
+
+function mkdir(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.rename" id="apidoc.element.brackets.native.rename">
+        function <span class="apidocSignatureSpan">brackets.native.</span>rename
+        <span class="apidocSignatureSpan">(oldPath, newPath, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rename(oldPath, newPath, callback) {
+    fs.rename(oldPath, newPath, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            return callback(err);
+        }
+        fs.resolvePath(req.newPath, srv, function (err, newPath) {
+            if (err) {
+                return callback(err);
+            }
+
+            fs.<span class="apidocCodeKeywordSpan">rename</span>(oldPath, newPath, callback);
+        });
+    });
+}
+
+function readFile(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+        if (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.resolvePath" id="apidoc.element.brackets.native.resolvePath">
+        function <span class="apidocSignatureSpan">brackets.native.</span>resolvePath
+        <span class="apidocSignatureSpan">(reqPath, context, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolvePath(reqPath, context, callback) {
+    var extRoot = context.httpRoot + "/extensions/",
+        userExt = context.httpRoot + "/extensions/user",
+        root,
+        err,
+        res;
+
+    if (reqPath.startsWith(projRoot)) {
+        root = context.projectsDir;
+        res = pathUtil.join(root, reqPath.substr(projRoot.length));
+    } else if (reqPath.startsWith(userExt)) {
+        root = context.supportDir + "/extensions/user";
+        res = pathUtil.join(root, reqPath.substr(userExt.length));
+    } else if (reqPath.startsWith(extRoot)) {
+        root = context.defaultExtensions;
+        res = pathUtil.join(context.defaultExtensions, reqPath.substr(extRoot.length));
+    } else if (reqPath.startsWith(suppRoot)) {
+        root = context.supportDir;
+        res = pathUtil.join(context.supportDir, reqPath.substr(suppRoot.length));
+    } else if (reqPath.startsWith(sampRoot)) {
+        root = context.samplesDir;
+        res = pathUtil.join(context.samplesDir, reqPath.substr(sampRoot.length));
+    } else {
+        err = new Error("No such file or directory.");
+        err.code = "ENOENT";
+        return callback(err);
+    }
+
+    if (res.substr(0, root.length) !== root) {
+        err = new Error("Permission denied.");
+        err.code = "EACCES";
+        callback(err);
+    } else {
+        callback(null, res);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+"use strict";
+
+function init(srv) {
+    var fs = srv.fileSystem;
+
+    function stat(req, callback) {
+        fs.<span class="apidocCodeKeywordSpan">resolvePath</span>(req, srv, function (err, path) {
+if (err) {
+    return callback({ err: err });
+}
+
+fs.stat(path, function (err, stats) {
+    callback(err ? { err: err } : { stats: stats });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.stat" id="apidoc.element.brackets.native.stat">
+        function <span class="apidocSignatureSpan">brackets.native.</span>stat
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stat(path, callback) {
+    fs.stat(path, function (err, stats) {
+        if (err) {
+            return callback(err);
+        }
+
+        callback(null, {
+            isFile: stats.isFile(),
+            mtime: stats.mtime,
+            size: stats.size,
+            realPath: null, // TODO: Set real path if symbolic link.
+            hash: stats.mtime.getTime()
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function stat(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback({ err: err });
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">stat</span>(path, function (err, stats) {
+            callback(err ? { err: err } : { stats: stats });
+        });
+    });
+}
+
+function readdir(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.unlink" id="apidoc.element.brackets.native.unlink">
+        function <span class="apidocSignatureSpan">brackets.native.</span>unlink
+        <span class="apidocSignatureSpan">(path, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unlink(path, callback) {
+    rimraf(path, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function unlink(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">unlink</span>(path, callback);
+    });
+}
+
+function moveToTrash(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.unwatchAll" id="apidoc.element.brackets.native.unwatchAll">
+        function <span class="apidocSignatureSpan">brackets.native.</span>unwatchAll
+        <span class="apidocSignatureSpan">(req, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unwatchAll(req, callback) {
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function unwatchAll(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">unwatchAll</span>(path, callback);
+    });
+}
+
+function copyFile(req, callback) {
+    fs.resolvePath(req.src, srv, function (err, src) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.unwatchPath" id="apidoc.element.brackets.native.unwatchPath">
+        function <span class="apidocSignatureSpan">brackets.native.</span>unwatchPath
+        <span class="apidocSignatureSpan">(req, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unwatchPath(req, callback) {
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function unwatchPath(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">unwatchPath</span>(path, callback);
+    });
+}
+
+function unwatchAll(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.watchPath" id="apidoc.element.brackets.native.watchPath">
+        function <span class="apidocSignatureSpan">brackets.native.</span>watchPath
+        <span class="apidocSignatureSpan">(req, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watchPath(req, callback) {
+    callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function watchPath(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">watchPath</span>(path, callback);
+    });
+}
+
+function unwatchPath(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.native.writeFile" id="apidoc.element.brackets.native.writeFile">
+        function <span class="apidocSignatureSpan">brackets.native.</span>writeFile
+        <span class="apidocSignatureSpan">(path, data, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeFile(path, data, encoding, callback) {
+    fs.writeFile(path, data, { encoding: encoding }, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function writeFile(req, callback) {
+    fs.resolvePath(req.path, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+        }
+
+        fs.<span class="apidocCodeKeywordSpan">writeFile</span>(path, req.data, req.encoding, callback);
+    });
+}
+
+function unlink(req, callback) {
+    fs.resolvePath(req, srv, function (err, path) {
+        if (err) {
+            return callback(err);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.package_validator" id="apidoc.module.brackets.package_validator">module brackets.package_validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.package_validator._parsePersonString" id="apidoc.element.brackets.package_validator._parsePersonString">
+        function <span class="apidocSignatureSpan">brackets.package_validator.</span>_parsePersonString
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parsePersonString(obj) {
+    if (typeof (obj) === "string") {
+        var parts = _personRegex.exec(obj);
+
+        // No regex match, so we just synthesize an object with an opaque name string
+        if (!parts) {
+            return {
+                name: obj
+            };
+        } else {
+            var result = {
+                name: parts[1]
+            };
+            if (parts[2]) {
+                result.email = parts[2];
+            }
+            if (parts[3]) {
+                result.url = parts[3];
+            }
+            return result;
+        }
+    } else {
+        // obj is not a string, so return as is
+        return obj;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.package_validator.validate" id="apidoc.element.brackets.package_validator.validate">
+        function <span class="apidocSignatureSpan">brackets.package_validator.</span>validate
+        <span class="apidocSignatureSpan">(path, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(path, options, callback) {
+    options = options || {};
+    fs.exists(path, function (doesExist) {
+        if (!doesExist) {
+            callback(null, {
+                errors: [[Errors.NOT_FOUND_ERR, path]]
+            });
+            return;
+        }
+        temp.mkdir("bracketsPackage_", function _tempDirCreated(err, extractDir) {
+            if (err) {
+                callback(err, null);
+                return;
+            }
+            extractAndValidateFiles(path, extractDir, options, callback);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.brackets.socket" id="apidoc.module.brackets.socket">module brackets.socket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.brackets.socket.init" id="apidoc.element.brackets.socket.init">
+        function <span class="apidocSignatureSpan">brackets.socket.</span>init
+        <span class="apidocSignatureSpan">(srv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(srv) {
+    var root = srv.httpRoot + "-ext",
+        apiUrl = root + "/api";
+
+    srv.httpServer.on("request", function (req, res) {
+        if (req.url.startsWith(apiUrl)) {
+            res.setHeader("Content-Type", "application/json");
+            res.end(
+                JSON.stringify(DomainManager.getDomainDescriptions(),
+                               null,
+                               4)
+            );
+        }
+    });
+
+    srv.io
+        .of(root)
+        .on("connection", ConnectionManager.createConnection);
+
+    DomainManager.httpRoot = srv.httpRoot;
+    DomainManager.supportDir = srv.supportDir;
+    DomainManager.projectsDir = srv.projectsDir;
+    DomainManager.samplesDir = srv.samplesDir;
+    DomainManager.allowUserDomains = srv.allowUserDomains;
+    DomainManager.loadDomainModulesFromPaths(["./BaseDomain"]);
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
         if (err &amp;&amp; err.code !== "EEXIST") {
             throw err;
